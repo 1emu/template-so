@@ -5,7 +5,7 @@ DFLAGS = -Wall -g
 CFLAGS = $(DFLAGS) $(OFLAGS) $(LFLAGS)
 
 PROGS = Main Terminator
-OBJS = Configuration.o Utils.o Colors.o Process.o Queue.o SemaphoreArray.o SharedMemory.o 
+OBJS = Configuration.o Utils.o Colors.o Process.o Queue.o SemaphoreArray.o SharedMemory.o Semaphore.o 
 
 all: $(PROGS) clean
 

@@ -80,6 +80,10 @@ void SemaphoreArray::setSemaphoreArrayId(int id) {
 	this->semaphoreArrayId = id;
 }
 
+void SemaphoreArray::destroy(unsigned int id) {
+	destroy(id, 1);
+}
+
 void SemaphoreArray::destroy(unsigned int id, unsigned int size) {
 	int semaphoreArrayId = getSemaphoreArrayId(id, size);
 	int removeResult = semctl(semaphoreArrayId, IPC_RMID, NULL);

@@ -10,7 +10,7 @@
 using namespace std;
 
 
-void showProductionOrder(int id, const ProductionOrder& po) {
+void showProductionOrder(int id, const Store& po) {
 	string announcement = "Nueva orden de Compra =[ "
 			+ Utils::intToString(po.amountOfItems[PROCESSOR]) + "P , "
 			+ Utils::intToString(po.amountOfItems[MOTHERBOARD])
@@ -20,8 +20,8 @@ void showProductionOrder(int id, const ProductionOrder& po) {
 }
 
 
-ProductionOrder newProductionOrder(){
-    ProductionOrder productionOrder;
+Store newProductionOrder(){
+    Store productionOrder;
     productionOrder.receiverId = 0;
     productionOrder.amountOfItems[PROCESSOR] = Utils::generateRandomNumberBetween(1, 5);
     productionOrder.amountOfItems[MOTHERBOARD] = Utils::generateRandomNumberBetween(1, 5);
@@ -29,7 +29,7 @@ ProductionOrder newProductionOrder(){
     return productionOrder;
 }
 
-ProductionOrder newProductionOrder();
+Store newProductionOrder();
 
 int main(int argc, char** argv) {
 
@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
 
     for(int i = 0; i < amountOfProductionOrders; i++){
 
-        ProductionOrder productionOrder = newProductionOrder();
+        Store productionOrder = newProductionOrder();
 
         sleep(Process::sleepTime());
 

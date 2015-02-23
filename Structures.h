@@ -26,7 +26,7 @@ typedef struct{
 typedef struct{
 	long receiverId;
 	int amountOfItems[3];
-} ProductionOrder;
+} Store;
 
 enum Items {PROCESSOR, MOTHERBOARD, DISK};
 enum Actions {PRODUCE, END};

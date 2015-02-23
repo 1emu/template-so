@@ -21,9 +21,10 @@ public:
 	static SemaphoreArray* create(unsigned int id,unsigned int size, unsigned int* initStatus);
 	static SemaphoreArray* get(unsigned int id, unsigned int size);
 
-	/* We redefine create and get for a mutex */
+	/* We redefine create, get and destroy for a mutex */
 	static SemaphoreArray* create(unsigned int id);
 	static SemaphoreArray* get(unsigned int id);
+	static void destroy(unsigned int id);
 
 	/* Defaults are for mutex */
 	void wait(unsigned int index = 0);
